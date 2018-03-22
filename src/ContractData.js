@@ -66,8 +66,6 @@ class ContractData extends Component {
 
     // If return value is an array
     if (displayData instanceof Array) {
-      console.log('displayData array', displayData)
-
       const displayListItems = displayData.map((datum, index) => ( <li key={index}>{datum}{pendingSpinner}</li> ))
 
       return(
@@ -79,7 +77,6 @@ class ContractData extends Component {
 
     // If retun value is an object
     if (displayData instanceof Object) {
-      console.log('displayData object', displayData)
       var i = 0
       const displayObjectProps = []
 
