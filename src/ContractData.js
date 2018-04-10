@@ -9,11 +9,10 @@ import PropTypes from 'prop-types'
 class ContractData extends Component {
   constructor(props, context) {
     super(props)
-
     this.contracts = context.drizzle.contracts
 
     // Get the contract ABI
-    const abi = this.contracts[this.props.contract].abi;
+    const abi = this.contracts[this.props.contract].abi
 
     // Fetch initial value from chain and return cache key for reactive updates.
     var methodArgs = this.props.methodArgs ? this.props.methodArgs : []
@@ -22,9 +21,8 @@ class ContractData extends Component {
     // Iterate over abi for correct function.
     for (var i = 0; i < abi.length; i++) {
       if (abi[i].name === this.props.method) {
-          this.fnABI = abi[i]
-
-          break
+        this.fnABI = abi[i]
+        break
       }
     }
   }
